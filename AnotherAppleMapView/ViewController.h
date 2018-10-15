@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Mapkit/Mapkit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource>
 
+@property(nonatomic,strong)MKMapView *mapView;
+@property(nonatomic,strong)CLLocationManager *locationManager;
+@property(nonatomic,strong)UISegmentedControl *segmentUS;
+@property(nonatomic,strong)UITableView *tableView;
+
+@property(nonnull,strong)NSMutableArray *array;
 
 @end
 
